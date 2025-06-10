@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: stage
+
+images:
+  - name: vikkzlfluxdemoacr.azurecr.io/azvote/azure-vote-front
+    newTag: 2a752a0f56f07ebf0823a9e18c647b3c388f38c4
+  - name: vikkzlfluxdemoacr.azurecr.io/azvote/azure-vote-back
+    newTag: 2a752a0f56f07ebf0823a9e18c647b3c388f38c4
+resources:
+  - manifests.yaml
